@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+// NOTE: This SCSS file is provided by grunt-spritesmith
+// @url https://github.com/Ensighten/grunt-spritesmith
+//
+// SCSS variables are information about icon's compiled state,
+// stored under its original directory and file name
+//
+// e.g. /sprite/hoge-fuga/ico_home.png
+//
+// .icon-home {
+//   width: $spr-hoge-fuga-icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $spr-hoge-fuga-icon-home:
+//     x y offset_x offset_y width height total_width total_height image_path;
+//
+// @example
+//
+// Case1:
+//
+// ```scss
+// %spr-base-hoge-fuga {
+//     @include nj-grunt-spr-image($spr-hoge-fuga);
+// }
+// ...
+// .sample {
+//     @extend %spr-base-hoge-fuga;
+//     @include nj-grunt-spr($spr-hoge-fuga-*);
+// }
+// ```
+//
+// ```css
+// .sample {
+//   background-image: url(../img/sprite/hoge-fuga.png);
+// }
+// ...
+// .sample {
+//   width: 10px;
+//   height: 9px;
+//   background-position: 0 -50px;
+// }
+// ```
+//
+// Case2:
+//
+// ```scss
+// .sample {
+//     @include nj-grunt-spr-width($spr-hoge-fuga-*);
+//       //-> width: **px;
+//     @include nj-grunt-spr-height($spr-hoge-fuga-*);
+//       //-> height: **px;
+//     @include nj-grunt-spr-position($spr-hoge-fuga-*);
+//       //-> background-position: **px **px;
+//     @include nj-grunt-spr-image($spr-hoge-fuga-*);
+//       //-> background-image: url(...);
+//     @include nj-grunt-spr-all($spr-hoge-fuga-*);
+//       //-> Output properties below
+//            `width`, `height`, `background-position`, `background-image`
+// }
+// ```
+
+// spritesheet
+$spr-hoge-fuga-width: 76px;
+$spr-hoge-fuga-height: 76px;
+$spr-hoge-fuga-total-width: 76px;
+$spr-hoge-fuga-total-height: 76px;
+$spr-hoge-fuga-image: '../img/sprite/hoge-fuga.png';
+$spr-hoge-fuga: null null null null 76px 76px 76px 76px '../img/sprite/hoge-fuga.png';
+
+// each images
+$spr-hoge-fuga-ico_help-02-x: 0px;
+$spr-hoge-fuga-ico_help-02-y: 0px;
+$spr-hoge-fuga-ico_help-02-offset-x: 0px;
+$spr-hoge-fuga-ico_help-02-offset-y: 0px;
+$spr-hoge-fuga-ico_help-02-width: 36px;
+$spr-hoge-fuga-ico_help-02-height: 36px;
+$spr-hoge-fuga-ico_help-02-total-width: 76px;
+$spr-hoge-fuga-ico_help-02-total-height: 76px;
+$spr-hoge-fuga-ico_help-02-image: '../img/sprite/hoge-fuga.png';
+$spr-hoge-fuga-ico_help-02: 0px 0px 0px 0px 36px 36px 76px 76px '../img/sprite/hoge-fuga.png';
+
+$spr-hoge-fuga-ico_help-x: 40px;
+$spr-hoge-fuga-ico_help-y: 0px;
+$spr-hoge-fuga-ico_help-offset-x: -40px;
+$spr-hoge-fuga-ico_help-offset-y: 0px;
+$spr-hoge-fuga-ico_help-width: 36px;
+$spr-hoge-fuga-ico_help-height: 36px;
+$spr-hoge-fuga-ico_help-total-width: 76px;
+$spr-hoge-fuga-ico_help-total-height: 76px;
+$spr-hoge-fuga-ico_help-image: '../img/sprite/hoge-fuga.png';
+$spr-hoge-fuga-ico_help: 40px 0px -40px 0px 36px 36px 76px 76px '../img/sprite/hoge-fuga.png';
+
+$spr-hoge-fuga-ico_home-02-x: 0px;
+$spr-hoge-fuga-ico_home-02-y: 40px;
+$spr-hoge-fuga-ico_home-02-offset-x: 0px;
+$spr-hoge-fuga-ico_home-02-offset-y: -40px;
+$spr-hoge-fuga-ico_home-02-width: 36px;
+$spr-hoge-fuga-ico_home-02-height: 36px;
+$spr-hoge-fuga-ico_home-02-total-width: 76px;
+$spr-hoge-fuga-ico_home-02-total-height: 76px;
+$spr-hoge-fuga-ico_home-02-image: '../img/sprite/hoge-fuga.png';
+$spr-hoge-fuga-ico_home-02: 0px 40px 0px -40px 36px 36px 76px 76px '../img/sprite/hoge-fuga.png';
+
+$spr-hoge-fuga-ico_home-x: 40px;
+$spr-hoge-fuga-ico_home-y: 40px;
+$spr-hoge-fuga-ico_home-offset-x: -40px;
+$spr-hoge-fuga-ico_home-offset-y: -40px;
+$spr-hoge-fuga-ico_home-width: 36px;
+$spr-hoge-fuga-ico_home-height: 36px;
+$spr-hoge-fuga-ico_home-total-width: 76px;
+$spr-hoge-fuga-ico_home-total-height: 76px;
+$spr-hoge-fuga-ico_home-image: '../img/sprite/hoge-fuga.png';
+$spr-hoge-fuga-ico_home: 40px 40px -40px -40px 36px 36px 76px 76px '../img/sprite/hoge-fuga.png';
+

@@ -1,0 +1,3 @@
+@function inline-image($path) {
+  @return url(map-get($dataURI, $path));
+}

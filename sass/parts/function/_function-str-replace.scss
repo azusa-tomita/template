@@ -1,0 +1,27 @@
+// str-replace() - Replace in a string
+//
+// http://qiita.com/hail2u/items/fffba8d09a21fafaa52d
+//
+// @param {string}  $string    String that you want to replace
+// @param {string}  $substr    String that is to be replaced by `$newsubstr`
+// @param {string}  $newsubstr String that replaces `$substr`
+// @param {number*} $all       Flag for replaceing all (1+) or not (0)
+// @return {string}
+@function str-replace($string, $substr, $newsubstr, $all: 0) {
+  $position-found: str-index($string, $substr);
+
+  @while ($position-found > 0) {
+    $length-substr: str-length($substr);
+    $string-pre: str-slice($string, 0, $position-found - 1);
+    $string-post: str-slice($string, $position-found + $length-substr);
+    $string: $string-pre + $newsubstr + $string-post;
+
+    $position-found: 0;
+
+    @if ($all > 0) {
+      $position-found: str-index($string, $substr);
+    }
+  }
+
+  @return $string;
+}

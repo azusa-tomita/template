@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+// NOTE: This SCSS file is provided by grunt-spritesmith
+// @url https://github.com/Ensighten/grunt-spritesmith
+//
+// SCSS variables are information about icon's compiled state,
+// stored under its original directory and file name
+//
+// e.g. /sprite/foo/ico_home.png
+//
+// .icon-home {
+//   width: $spr-foo-icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $spr-foo-icon-home:
+//     x y offset_x offset_y width height total_width total_height image_path;
+//
+// @example
+//
+// Case1:
+//
+// ```scss
+// %spr-base-foo {
+//     @include nj-grunt-spr-image($spr-foo);
+// }
+// ...
+// .sample {
+//     @extend %spr-base-foo;
+//     @include nj-grunt-spr($spr-foo-*);
+// }
+// ```
+//
+// ```css
+// .sample {
+//   background-image: url(../img/sprite/foo.png);
+// }
+// ...
+// .sample {
+//   width: 10px;
+//   height: 9px;
+//   background-position: 0 -50px;
+// }
+// ```
+//
+// Case2:
+//
+// ```scss
+// .sample {
+//     @include nj-grunt-spr-width($spr-foo-*);
+//       //-> width: **px;
+//     @include nj-grunt-spr-height($spr-foo-*);
+//       //-> height: **px;
+//     @include nj-grunt-spr-position($spr-foo-*);
+//       //-> background-position: **px **px;
+//     @include nj-grunt-spr-image($spr-foo-*);
+//       //-> background-image: url(...);
+//     @include nj-grunt-spr-all($spr-foo-*);
+//       //-> Output properties below
+//            `width`, `height`, `background-position`, `background-image`
+// }
+// ```
+
+// spritesheet
+$spr-foo-width: 76px;
+$spr-foo-height: 36px;
+$spr-foo-total-width: 76px;
+$spr-foo-total-height: 36px;
+$spr-foo-image: '../img/sprite/foo_112233.png';
+$spr-foo: null null null null 76px 36px 76px 36px '../img/sprite/foo_112233.png';
+
+// each images
+$spr-foo-ico_help-x: 0px;
+$spr-foo-ico_help-y: 0px;
+$spr-foo-ico_help-offset-x: 0px;
+$spr-foo-ico_help-offset-y: 0px;
+$spr-foo-ico_help-width: 36px;
+$spr-foo-ico_help-height: 36px;
+$spr-foo-ico_help-total-width: 76px;
+$spr-foo-ico_help-total-height: 36px;
+$spr-foo-ico_help-image: '../img/sprite/foo_112233.png';
+$spr-foo-ico_help: 0px 0px 0px 0px 36px 36px 76px 36px '../img/sprite/foo_112233.png';
+
+$spr-foo-ico_home-x: 40px;
+$spr-foo-ico_home-y: 0px;
+$spr-foo-ico_home-offset-x: -40px;
+$spr-foo-ico_home-offset-y: 0px;
+$spr-foo-ico_home-width: 36px;
+$spr-foo-ico_home-height: 36px;
+$spr-foo-ico_home-total-width: 76px;
+$spr-foo-ico_home-total-height: 36px;
+$spr-foo-ico_home-image: '../img/sprite/foo_112233.png';
+$spr-foo-ico_home: 40px 0px -40px 0px 36px 36px 76px 36px '../img/sprite/foo_112233.png';
+

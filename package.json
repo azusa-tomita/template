@@ -1,0 +1,39 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "sass template",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^5.1.0",
+    "datauri": "^0.6.0",
+    "image-size": "^0.3.5",
+    "json2css": "^6.1.0",
+    "mathsass": "^0.9.5",
+    "spritesmith-cli": "^1.0.7"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "config": {
+    "http_path":"/",
+    "css_dir":"css",
+    "sass_dir":"sass",
+    "sass":{
+      "option":"--require sass-globbing --sourcemap=none --style=expanded --line-numbers --line-comments --no-cache"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch $npm_package_config_sass_dir:$npm_package_config_css_dir $npm_package_config_sass_option",
+    "sprite": "spritesmith --rc lib/spritesmith/spritesmith.js",
+    "image-size": "node lib/imgaeSize/imgSz.js",
+    "image-uri": "node lib/dataURI/dataURI.js",
+    "prefix": "autoprefixer $npm_package_config_css_dir/*.css",
+    "prebuild":"npm run sprite && npm run image-size && npm run image-uri",
+    "postbuild":"npm run prefix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azusa-tomita/template.git"
+  }
+}

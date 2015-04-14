@@ -1,0 +1,6 @@
+@function image-width($path) {
+  @return map-get(map-get($image-size, $path),width);
+}
+@function image-height($path) {
+  @return map-get(map-get($image-size, $path),height);
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+$image-size:(
+{{#items}}
+	"{{{escaped_image}}}":(
+		width:{{px.width}},
+		height:{{px.height}}
+	),
+{{! blank line is for readability }}
+{{/items}}
+);
+
+

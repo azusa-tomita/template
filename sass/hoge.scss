@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@import "parts/npm/*";
+@import "parts/function/*";
+@import "node_modules/mathsass/dist/math";
+
+autoprefix{
+	display: flex;
+}
+image-size{
+	width:image-width("img/ico_help.png");
+	height:image-width("img/sprite/hoge-fuga.png");
+}
+
+dataurl{
+	background: inline-image("src/dataURI/test/ico_help.png");
+}
+
+// sprite{
+// 	background:url($spr-foo-ico_home-image) $spr-foo-ico_home-x $spr-foo-ico_home-y no-repeat;
+// 	width:$spr-foo-ico_home-width;
+// 	height:$spr-foo-ico_home-height;
+// }
+
+// math{
+// 	cosine:cos(45deg);
+// 	pow: pow(4, -2);
+// }

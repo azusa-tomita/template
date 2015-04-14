@@ -1,0 +1,88 @@
+// Do not remove this comment line to keep comments below in provided SCSS files
+
+@charset "UTF-8";
+
+// NOTE: This SCSS file is provided by grunt-spritesmith
+// @url https://github.com/Ensighten/grunt-spritesmith
+//
+// SCSS variables are information about icon's compiled state,
+// stored under its original directory and file name
+//
+// e.g. /sprite/{{options.target}}/ico_home.png
+//
+// .icon-home {
+//   width: ${{options.spritesheet}}-icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// ${{options.spritesheet}}-icon-home:
+//     x y offset_x offset_y width height total_width total_height image_path;
+//
+// @example
+//
+// Case1:
+//
+// ```scss
+// %spr-base-{{options.target}} {
+//     @include nj-grunt-spr-image(${{options.spritesheet}});
+// }
+// ...
+// .sample {
+//     @extend %spr-base-{{options.target}};
+//     @include nj-grunt-spr(${{options.spritesheet}}-*);
+// }
+// ```
+//
+// ```css
+// .sample {
+//   background-image: url(../img/sprite/{{options.target}}.png);
+// }
+// ...
+// .sample {
+//   width: 10px;
+//   height: 9px;
+//   background-position: 0 -50px;
+// }
+// ```
+//
+// Case2:
+//
+// ```scss
+// .sample {
+//     @include nj-grunt-spr-width(${{options.spritesheet}}-*);
+//       //-> width: **px;
+//     @include nj-grunt-spr-height(${{options.spritesheet}}-*);
+//       //-> height: **px;
+//     @include nj-grunt-spr-position(${{options.spritesheet}}-*);
+//       //-> background-position: **px **px;
+//     @include nj-grunt-spr-image(${{options.spritesheet}}-*);
+//       //-> background-image: url(...);
+//     @include nj-grunt-spr-all(${{options.spritesheet}}-*);
+//       //-> Output properties below
+//            `width`, `height`, `background-position`, `background-image`
+// }
+// ```
+
+// spritesheet
+${{options.spritesheet}}-width: {{items.0.px.total_width}};
+${{options.spritesheet}}-height: {{items.0.px.total_height}};
+${{options.spritesheet}}-total-width: {{items.0.px.total_width}};
+${{options.spritesheet}}-total-height: {{items.0.px.total_height}};
+${{options.spritesheet}}-image: '{{{items.0.escaped_image}}}';
+${{options.spritesheet}}: null null null null {{items.0.px.total_width}} {{items.0.px.total_height}} {{items.0.px.total_width}} {{items.0.px.total_height}} '{{{items.0.escaped_image}}}';
+
+// each images
+{{#items}}
+${{name}}-x: {{px.x}};
+${{name}}-y: {{px.y}};
+${{name}}-offset-x: {{px.offset_x}};
+${{name}}-offset-y: {{px.offset_y}};
+${{name}}-width: {{px.width}};
+${{name}}-height: {{px.height}};
+${{name}}-total-width: {{px.total_width}};
+${{name}}-total-height: {{px.total_height}};
+${{name}}-image: '{{{escaped_image}}}';
+${{name}}: {{px.x}} {{px.y}} {{px.offset_x}} {{px.offset_y}} {{px.width}} {{px.height}} {{px.total_width}} {{px.total_height}} '{{{escaped_image}}}';
+{{! blank line is for readability }}
+
+{{/items}}
